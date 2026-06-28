@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <div
+    class="wrapper__input lines-on-light alternative-style"
+    [class.style-error]="error()">
+    <input
+      class="input d_text-default"
+      [type]="type()"
+      [value]="value()"
+      (input)="value.set($event.target.value)"
+      [placeholder]="placeholder()" />
+    @if (value()) {
+      <span
+        class="icon material-symbols-outlined"
+        role="button"
+        tabindex="0"
+        (click)="value.set('')"
+        (keydown.enter)="value.set('')"
+        (keydown.space)="$event.preventDefault(); value.set('')"
+        aria-label="Очистить поле"
+        >close</span
+      >
+    }
+  </div>
+  @if (error()) {
+    <p class="wrapper__error d_text-small error">
+      {{ error() }}
+    </p>
+  }
+</div>
