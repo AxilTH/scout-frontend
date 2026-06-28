@@ -1,0 +1,27 @@
+<div class="wrapper lines-on-light">
+  <h1 class="wrapper__title d_title-h1">Авторизация</h1>
+  <form class="login-form" (focusin)="clearErrors()">
+    <div>
+      <app-input
+        type="email"
+        placeholder="Введите адрес электронной почты"
+        [formField]="loginForm.email"
+        [error]="loginForm.email().errors()[0]?.message!"></app-input>
+    </div>
+    <div>
+      <app-input
+        type="password"
+        placeholder="Введите пароль"
+        [formField]="loginForm.password"
+        [error]="loginForm.password().errors()[0]?.message!"></app-input>
+    </div>
+    @if (formServerError()) {
+      <p class="login-form__error d_text-small error">{{ formServerError() }}</p>
+    }
+    <app-button
+      backgroundColor="primary-background"
+      textColor="primary-on-dark"
+      text="Войти"
+      (click)="onSubmit()"></app-button>
+  </form>
+</div>
