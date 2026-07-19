@@ -59,7 +59,7 @@ export class LoginComponent {
       .login(credentials)
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
-        next: response => {
+        next: () => {
           this.router.navigate(['/']);
         },
         error: (err: HttpErrorResponse) => {

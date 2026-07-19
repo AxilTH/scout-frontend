@@ -1,9 +1,10 @@
 {
-  // For more information, visit: https://go.microsoft.com/fwlink/?LinkId=733558
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Run Frontend",
       "type": "npm",
+      "path": "apps/scout-frontend",
       "script": "start",
       "isBackground": true,
       "problemMatcher": {
@@ -21,7 +22,9 @@
       }
     },
     {
+      "label": "Run Frontend Tests",
       "type": "npm",
+      "path": "apps/scout-frontend",
       "script": "test",
       "isBackground": true,
       "problemMatcher": {

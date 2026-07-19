@@ -1,0 +1,23 @@
+{
+  // Игнорируем специфичные CSS директивы
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+
+  // Включаем форматирование файлов через Prettier при сохранении
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  // Настройки ESLint для монорепозитория
+  "eslint.enable": true,
+  "eslint.format.enable": true,
+  "eslint.validate": ["javascript", "typescript", "html"],
+  "eslint.useFlatConfig": true,
+
+  // Указываем рабочие директории для ESLint.
+  // Это заставит расширение запускать линтинг внутри каждой папки отдельно,
+  // благодаря чему будут подхватываться их собственные eslint.config.js / eslint.config.mjs
+  "eslint.workingDirectories": [
+    "apps/scout-frontend",
+    "apps/scout-backend-nest"
+  ]
+}
