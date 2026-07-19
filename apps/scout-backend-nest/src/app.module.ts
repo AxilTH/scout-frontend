@@ -11,10 +11,11 @@ import { AuthModule } from './auth/auth.module';
     ConfigModule.forRoot({
       isGlobal: true,
       expandVariables: true,
+      envFilePath: 'apps/scout-backend-nest/.env', // <-- Добавляем эту строчку
     }),
     PrismaModule,
     UsersModule,
-    AuthModule
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

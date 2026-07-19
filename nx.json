@@ -1,0 +1,12 @@
+{
+  "installation": {
+    "version": "23.1.0",
+    "plugins": {
+      "@nx/eslint": "23.1.0",
+      "@nx/jest": "23.1.0",
+      "@nx/vitest": "23.1.0"
+    }
+  },
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "analytics": true
+}

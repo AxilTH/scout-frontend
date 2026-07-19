@@ -1,0 +1,16 @@
+{
+  "name": "scout-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start:frontend": "nx start scout-frontend",
+    "start:backend": "nx start:dev scout-backend-nest",
+    "start:all": "nx run-many --targets=start,start:dev --parallel"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "nx": "23.1.0"
+  }
+}
